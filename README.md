@@ -28,13 +28,14 @@ This project is built using **Test-Driven Development (TDD)** and `unittest`.
 add("")                       # ➞ 0
 add("1")                      # ➞ 1
 add("1,2")                    # ➞ 3
+add("1,2,3")                  # ➞ 6
 add("1\n2,3")                 # ➞ 6
-add("//;\n1;2")              # ➞ 3
+add("//;\n1;2")               # ➞ 3
 add("1,-2,-5")                # ➞ ValueError: negative numbers not allowed -2, -5
 add("2,1001")                 # ➞ 2
-add("//[***]\n1***2***3")    # ➞ 6
-add("//[*][%]\n1*2%3")       # ➞ 6
-add("//[***][%%]\n1***2%%3") # ➞ 6
+add("//[***]\n1***2***3")     # ➞ 6
+add("//[*][%]\n1*2%3")        # ➞ 6
+add("//[***][%%]\n1***2%%3")  # ➞ 6
 ```
 
 ## 🚀 How to Run
