@@ -1,6 +1,13 @@
+import re
+
 def add(numbers: str) -> int:
     if numbers == "":
         return 0
-    # Assuming the input is a comma-separated string of numbers
-    numbers = numbers.split(",")
-    return sum(int(n) for n in numbers)
+    delimiter = ",|\n"
+    if numbers.startswith("//"):
+        parts = numbers.split("\n", 1)
+        delimiter = re.escape(parts[0][2:]) 
+        numbers = parts[1]
+    
+    number_list = re.split(delimiter, numbers)
+    return sum(int(n) for n in number_list)
