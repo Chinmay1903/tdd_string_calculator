@@ -49,5 +49,5 @@ add("//[***][%%]\n1***2%%3")  # ➞ 6
 ## 🧪 Run all tests
 Using unittest:
 ```bash
-python -m unittest discover -s tests
+python -m unittest discover -s tests -v
 ```
